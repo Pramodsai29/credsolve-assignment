@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="background:#0f172a; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="boxBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="boxSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="boxGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#854d0e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#713f12" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="boxApp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#172554" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Header -->
+  <rect x="40" y="30" width="1120" height="70" rx="12" fill="url(#gradHeader)" filter="url(#shadow)"/>
+  <text x="60" y="65" fill="#ffffff" font-size="22" font-weight="800" letter-spacing="0.5">CredSolve Enterprise Production Analytics Platform</text>
+  <text x="60" y="85" fill="#e0e7ff" font-size="13" font-weight="500">End-to-End Enterprise Architecture: Ingestion → Medallion Warehouse → Semantic Layer → Executive Action</text>
+
+  <!-- Column 1: Sources -->
+  <rect x="40" y="130" width="200" height="630" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="40" y="130" width="200" height="42" rx="12" fill="#334155"/>
+  <text x="55" y="157" fill="#f8fafc" font-size="14" font-weight="700">1. Data Sources</text>
+
+  <g transform="translate(55, 195)">
+    <rect width="170" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="13" font-weight="700">Telephony &amp; Dialer</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="11">Airtel, Exotel, Twilio</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="11">Calls &amp; Dispositions</text>
+    <text x="12" y="76" fill="#fbbf24" font-size="10">CDC &amp; Webhooks</text>
+  </g>
+
+  <g transform="translate(55, 305)">
+    <rect width="170" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="13" font-weight="700">Payment Gateways</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="11">Bank NACH, Razorpay</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="11">Cashfree, Core Ledger</text>
+    <text x="12" y="76" fill="#fbbf24" font-size="10">Settlement Feeds</text>
+  </g>
+
+  <g transform="translate(55, 415)">
+    <rect width="170" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="13" font-weight="700">Digital Engagement</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="11">WhatsApp Business API</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="11">SMS Gateway &amp; Shortlinks</text>
+    <text x="12" y="76" fill="#fbbf24" font-size="10">Delivery Callbacks</text>
+  </g>
+
+  <g transform="translate(55, 525)">
+    <rect width="170" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="13" font-weight="700">CRM &amp; Core LMS</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="11">Loan Accounts Master</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="11">Borrowers &amp; PTP Records</text>
+    <text x="12" y="76" fill="#fbbf24" font-size="10">Daily Snapshots</text>
+  </g>
+
+  <g transform="translate(55, 635)">
+    <rect width="170" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="13" font-weight="700">Field Operations</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="11">Field Officer App</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="11">Geotagged Visits</text>
+    <text x="12" y="76" fill="#fbbf24" font-size="10">Receipt Receipts</text>
+  </g>
+
+  <!-- Connectors from Sources to Streaming -->
+  <path d="M 240 240 L 280 240" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 350 L 280 350" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 460 L 280 460" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 570 L 280 570" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 680 L 280 680" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 2: Streaming & Ingestion -->
+  <rect x="280" y="130" width="160" height="630" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="280" y="130" width="160" height="42" rx="12" fill="#334155"/>
+  <text x="295" y="157" fill="#f8fafc" font-size="14" font-weight="700">2. Ingestion &amp; CDC</text>
+
+  <g transform="translate(295, 200)">
+    <rect width="130" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#f43f5e" font-size="12" font-weight="700">Kafka Topics</text>
+    <text x="12" y="44" fill="#cbd5e1" font-size="10">• raw.telephony</text>
+    <text x="12" y="62" fill="#cbd5e1" font-size="10">• raw.payments</text>
+    <text x="12" y="80" fill="#cbd5e1" font-size="10">• raw.whatsapp</text>
+    <text x="12" y="98" fill="#cbd5e1" font-size="10">• raw.field_visits</text>
+    <text x="12" y="125" fill="#a855f7" font-size="10" font-weight="600">Schema Registry</text>
+    <text x="12" y="140" fill="#94a3b8" font-size="9">Protobuf Contracts</text>
+  </g>
+
+  <g transform="translate(295, 380)">
+    <rect width="130" height="160" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#10b981" font-size="12" font-weight="700">Data Contracts</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="10">Gatekeeper Checks:</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="9">✓ Nullability Rules</text>
+    <text x="12" y="82" fill="#cbd5e1" font-size="9">✓ Regex ID Formats</text>
+    <text x="12" y="100" fill="#cbd5e1" font-size="9">✓ UTC Timestamps</text>
+    <text x="12" y="118" fill="#cbd5e1" font-size="9">✓ Idempotency Key</text>
+    <text x="12" y="145" fill="#f43f5e" font-size="9" font-weight="600">Dead Letter Queue</text>
+  </g>
+
+  <g transform="translate(295, 570)">
+    <rect width="130" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
+    <text x="12" y="24" fill="#38bdf8" font-size="12" font-weight="700">Airflow / Prefect</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="10">Orchestration DAGs:</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="9">• Hourly Micro-batch</text>
+    <text x="12" y="82" fill="#cbd5e1" font-size="9">• Nightly Reconcile</text>
+    <text x="12" y="100" fill="#cbd5e1" font-size="9">• 72h Watermark</text>
+    <text x="12" y="125" fill="#fbbf24" font-size="10" font-weight="600">Late Ingestion</text>
+  </g>
+
+  <!-- Connectors to Lakehouse -->
+  <path d="M 440 275 L 480 275" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 440 460 L 480 460" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 440 645 L 480 645" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 3: Lakehouse Medallion Architecture -->
+  <rect x="480" y="130" width="370" height="630" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="480" y="130" width="370" height="42" rx="12" fill="#334155"/>
+  <text x="495" y="157" fill="#f8fafc" font-size="14" font-weight="700">3. Medallion Analytical Warehouse (DuckDB / Delta)</text>
+
+  <!-- Bronze Box -->
+  <g transform="translate(495, 190)">
+    <rect width="340" height="110" rx="8" fill="url(#boxBronze)" stroke="#b45309"/>
+    <text x="15" y="22" fill="#fef08a" font-size="13" font-weight="700">BRONZE LAYER (Immutable Raw Lake)</text>
+    <text x="15" y="42" fill="#fed7aa" font-size="11">Exact copy of source records with partition metadata</text>
+    <text x="15" y="62" fill="#ffedd5" font-size="10">• stg_borrowers (30.6k) • stg_accounts (30k) • stg_payments (25.5k)</text>
+    <text x="15" y="80" fill="#ffedd5" font-size="10">• stg_calls (91.3k) • stg_whatsapp (60.6k) • stg_dispositions (35k)</text>
+    <text x="15" y="98" fill="#fde047" font-size="10" font-weight="600">Append-only audit trail | Full disaster replayability</text>
+  </g>
+
+  <!-- Down arrow Bronze to Silver -->
+  <path d="M 665 300 L 665 325" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Silver Box -->
+  <g transform="translate(495, 325)">
+    <rect width="340" height="150" rx="8" fill="url(#boxSilver)" stroke="#475569"/>
+    <text x="15" y="22" fill="#93c5fd" font-size="13" font-weight="700">SILVER LAYER (Cleaned &amp; Resolved)</text>
+    <text x="15" y="42" fill="#e2e8f0" font-size="11">Entity resolution, deduplication, and sanity guards</text>
+    <text x="15" y="62" fill="#cbd5e1" font-size="10">✓ Deduplicate Borrowers: SCD-2 window ranking (11k master)</text>
+    <text x="15" y="78" fill="#cbd5e1" font-size="10">✓ Deduplicate Payments: Purge retries &amp; isolate SUCCESS (17.5k)</text>
+    <text x="15" y="94" fill="#cbd5e1" font-size="10">✓ Normalize Telephony: 0s duration on un-answered calls</text>
+    <text x="15" y="110" fill="#cbd5e1" font-size="10">✓ Flag Gateways: Inactive routing &amp; non-compliant hours</text>
+    <text x="15" y="132" fill="#38bdf8" font-size="10" font-weight="600">dbt tests: Unique PKs | FK Integrity | Zero Data Explosions</text>
+  </g>
+
+  <!-- Down arrow Silver to Gold -->
+  <path d="M 665 475 L 665 500" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Gold Box -->
+  <g transform="translate(495, 500)">
+    <rect width="340" height="235" rx="8" fill="url(#boxGold)" stroke="#eab308"/>
+    <text x="15" y="22" fill="#fef08a" font-size="13" font-weight="700">GOLD LAYER (Certified Business Models)</text>
+    <text x="15" y="42" fill="#fef9c3" font-size="11">Conformed Star Schema &amp; Omnichannel Datamarts</text>
+    
+    <rect x="15" y="52" width="145" height="48" rx="4" fill="#422006" stroke="#ca8a04"/>
+    <text x="22" y="70" fill="#fef08a" font-size="10" font-weight="700">Dim_Accounts (30k)</text>
+    <text x="22" y="86" fill="#fef9c3" font-size="9">DPD, Risk, Balance, Orphan</text>
+
+    <rect x="180" y="52" width="145" height="48" rx="4" fill="#422006" stroke="#ca8a04"/>
+    <text x="187" y="70" fill="#fef08a" font-size="10" font-weight="700">Dim_Borrowers (11k)</text>
+    <text x="187" y="86" fill="#fef9c3" font-size="9">Verified Contact &amp; City</text>
+
+    <rect x="15" y="108" width="145" height="48" rx="4" fill="#422006" stroke="#ca8a04"/>
+    <text x="22" y="126" fill="#fef08a" font-size="10" font-weight="700">Fact_Payments (17.5k)</text>
+    <text x="22" y="142" fill="#fef9c3" font-size="9">Verified Cash Ledger</text>
+
+    <rect x="180" y="108" width="145" height="48" rx="4" fill="#422006" stroke="#ca8a04"/>
+    <text x="187" y="126" fill="#fef08a" font-size="10" font-weight="700">Fact_Interactions (220k)</text>
+    <text x="187" y="142" fill="#fef9c3" font-size="9">Voice, WhatsApp, SMS, Field</text>
+
+    <rect x="15" y="164" width="310" height="58" rx="4" fill="#713f12" stroke="#eab308"/>
+    <text x="22" y="182" fill="#fef08a" font-size="11" font-weight="700">Bridge_Payment_Attribution (Multi-Window Engine)</text>
+    <text x="22" y="198" fill="#fef9c3" font-size="9">Attribution Lags: 0-24h, 24-72h, 3-7d (Operational) vs &gt;7d (Organic)</text>
+    <text x="22" y="212" fill="#fef9c3" font-size="9">Separates ₹1.05 Bn true organic self-cure from ₹265 M touched recovery</text>
+  </g>
+
+  <!-- Connectors to Serving Layer -->
+  <path d="M 850 560 L 890 560" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 850 670 L 890 670" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 4: Semantic & Applications -->
+  <rect x="890" y="130" width="270" height="630" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="890" y="130" width="270" height="42" rx="12" fill="#334155"/>
+  <text x="905" y="157" fill="#f8fafc" font-size="14" font-weight="700">4. Serving &amp; Executive Action</text>
+
+  <!-- Semantic Metric Store -->
+  <g transform="translate(905, 190)">
+    <rect width="240" height="120" rx="8" fill="url(#boxApp)" stroke="#3b82f6"/>
+    <text x="15" y="24" fill="#93c5fd" font-size="13" font-weight="700">Semantic Metric Store</text>
+    <text x="15" y="44" fill="#bfdbfe" font-size="10">Single Source of Truth Formulas:</text>
+    <text x="15" y="62" fill="#dbeafe" font-size="9">• Daily Run Rate = Success Amt / Days</text>
+    <text x="15" y="78" fill="#dbeafe" font-size="9">• Contact Rate = Reach / Total Dialed</text>
+    <text x="15" y="94" fill="#dbeafe" font-size="9">• PTP Kept Rate = Ledger Matched / PTPs</text>
+    <text x="15" y="110" fill="#60a5fa" font-size="9" font-weight="600">Zero Spreadsheet Discrepancies</text>
+  </g>
+
+  <!-- ML Feature Store -->
+  <g transform="translate(905, 325)">
+    <rect width="240" height="150" rx="8" fill="url(#boxApp)" stroke="#8b5cf6"/>
+    <text x="15" y="24" fill="#c4b5fd" font-size="13" font-weight="700">ML Uplift Feature Store</text>
+    <text x="15" y="44" fill="#ddd6fe" font-size="10">Real-time Account Features:</text>
+    <text x="15" y="62" fill="#ede9fe" font-size="9">• Days Past Due (DPD) Acceleration</text>
+    <text x="15" y="78" fill="#ede9fe" font-size="9">• Broken Promise Propensity Score</text>
+    <text x="15" y="94" fill="#ede9fe" font-size="9">• Digital Channel Responsiveness</text>
+    <text x="15" y="110" fill="#ede9fe" font-size="9">• Bureau Payment Behavioral Index</text>
+    <text x="15" y="134" fill="#a78bfa" font-size="10" font-weight="700">Powered by ₹10 Cr ML Investment</text>
+  </g>
+
+  <!-- Executive Dashboard Output -->
+  <g transform="translate(905, 490)">
+    <rect width="240" height="110" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+    <text x="15" y="24" fill="#34d399" font-size="13" font-weight="700">Executive CEO Cockpit</text>
+    <text x="15" y="44" fill="#a7f3d0" font-size="10">60-Second Strategic Visibility:</text>
+    <text x="15" y="62" fill="#d1fae5" font-size="9">✓ Calendar-Normalized Run Rates</text>
+    <text x="15" y="78" fill="#d1fae5" font-size="9">✓ True Operational Attribution (7d)</text>
+    <text x="15" y="94" fill="#d1fae5" font-size="9">✓ Telephony Gateway Route Health</text>
+  </g>
+
+  <!-- Algorithmic Dialer Feedback Loop -->
+  <g transform="translate(905, 615)">
+    <rect width="240" height="120" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="15" y="24" fill="#fbbf24" font-size="13" font-weight="700">Automated Dialer Router</text>
+    <text x="15" y="44" fill="#fef3c7" font-size="10">Operational Closed-Loop Action:</text>
+    <text x="15" y="62" fill="#fde68a" font-size="9">• Suppress 80% self-cures from calling</text>
+    <text x="15" y="78" fill="#fde68a" font-size="9">• Focus capacity on 30-90 DPD Uplift</text>
+    <text x="15" y="94" fill="#fde68a" font-size="9">• Route to WhatsApp first (low-cost)</text>
+    <text x="15" y="110" fill="#f59e0b" font-size="9" font-weight="700">Unlocks ₹21 Cr – ₹31 Cr Gain</text>
+  </g>
+
+  <!-- Feedback Arrow back to Sources -->
+  <path d="M 1025 735 L 1025 780 L 140 780 L 140 725" stroke="#f59e0b" stroke-dasharray="6,4" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="773" fill="#f59e0b" font-size="11" font-weight="600">Continuous Operational Feedback Loop (Dynamic Campaign Prioritization)</text>
+</svg>
